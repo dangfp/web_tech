@@ -12,7 +12,10 @@
       <div class="wave-journal">
         {{#journal_entry}}
           <h4><a href="#" class="subheader">{{title}}</a></h4>
-          <p>{{content}}</p>
+          <p>{{content}}<a href="/edit_journal_entry?id={{id}}">&nbsp;Edit</a>
+          <form action="/delete_journal_entry?id={{id}}" method="post">
+            <button type="submit">Delete</button>
+          </form>
         {{/journal_entry}}
         <a href="/"> Back to Home Page </a>
       </div>
